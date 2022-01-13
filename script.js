@@ -4,9 +4,6 @@ const quizContainer = document.getElementById('quiz-container');
 const submitButton = document.getElementById('submit');
 const result = document.getElementById('result');
 
-// function to display quizes
-function quizDisplay (){
-
     // Array of questions' 
     const quizQuestions = [
         {
@@ -50,22 +47,16 @@ function quizDisplay (){
             correctAnswer : "c"
         }
     ];
-    // array to store html elemnt output
+
+    // function to display quizes
+    function quizDisplay (){
+     // array to store html elemnt output
     const output = [];
 
     // render over each question and show them on User's Screen
     quizQuestions.forEach( ( eachQuestion , index) => {
-//const para = document.createElement('p');
-        //const input = document.createElement('input');
-        
-      /*  const alpha = [ a , b , c , d];
-        input.type = "radio";
-        input.name = "select";
-        para.textContent = e.question;
-        
-        quizContainer.appendChild(para);
-      */
-
+        //const para = document.createElement('p');
+        //const input = document.createElement('input')
         const answers = [];
         for( letter in eachQuestion.answer)
         {
@@ -76,18 +67,13 @@ function quizDisplay (){
                  </label>`
                 )
         }
-
         output.push(
             `<div class = "question"> ${eachQuestion.question} </div>
             <div class = "answer"> ${ answers.join('')} </div>
             `
         );
-
         quizContainer.innerHTML = output.join('');
-
-
-
-        /*
+         /*
         console.log(eachQuestion.question);
 
         console.log(e.answer);
@@ -98,8 +84,6 @@ function quizDisplay (){
         console.log(e.correctAnswer);
         */
     })
-
-
 };
 
 // Display result 
