@@ -50,8 +50,45 @@ function quizDisplay (){
             correctAnswer : "c"
         }
     ];
-    quizQuestions.forEach( (e) => {
-        console.log(e.question);
+    // array to store html elemnt output
+    const output = [];
+
+    // render over each question and show them on User's Screen
+    quizQuestions.forEach( ( eachQuestion , index) => {
+//const para = document.createElement('p');
+        //const input = document.createElement('input');
+        
+      /*  const alpha = [ a , b , c , d];
+        input.type = "radio";
+        input.name = "select";
+        para.textContent = e.question;
+        
+        quizContainer.appendChild(para);
+      */
+
+        const answers = [];
+        for( letter in eachQuestion.answer)
+        {
+            answers.push(
+                `<label>
+                <input type = "radio" name = "Question ${ index }" value = "${letter}">
+                ${letter} : ${eachQuestion.answer[letter]}
+                 </label>`
+                )
+        }
+
+        output.push(
+            `<div class = "question"> ${eachQuestion.question} </div>
+            <div class = "answer"> ${ answers.join('')} </div>
+            `
+        );
+
+        quizContainer.innerHTML = output.join('');
+
+
+
+        /*
+        console.log(eachQuestion.question);
 
         console.log(e.answer);
               console.log(e.answer.a);
@@ -59,6 +96,7 @@ function quizDisplay (){
               console.log(e.answer.c);
               console.log(e.answer.d);
         console.log(e.correctAnswer);
+        */
     })
 
 
