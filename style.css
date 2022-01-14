@@ -8,6 +8,8 @@ body{
     width : 80%;
     background-color: darkgrey;
     text-align: center;
+    background: #292d3e;;
+    color :aliceblue;
 }
 .quiz-container{
     background-color: azure;

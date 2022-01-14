@@ -62,7 +62,7 @@ const result = document.getElementById('result');
         {
             answers.push(
                 `<label>
-                <input type = "radio" name = "Question ${ index }" value = "${letter}">
+                <input type = "radio" name = "Question${ index }" value = "${letter}">
                 ${letter} : ${eachQuestion.answer[letter]}
                  </label>`
                 )
@@ -88,6 +88,27 @@ const result = document.getElementById('result');
 
 // Display result 
 function DisplayResult () {
+    const answerContainers = quizContainer.querySelectorAll('.answer');
+    console.log(answerContainers);
+    let correctCount = 0;
+    quizQuestions.forEach( ( eachQuestion , index) => {
+        // find the selected answer by the user
+        const answerContainer = answerContainers[index];
+        console.log(answerContainer);
+
+        const selector = `input[name = "Question${ index }" ]:checked`;
+        const selectedAnswer = (answerContainer.querySelector(selector) || {}).value;
+        console.log(selectedAnswer);
+        if( selectedAnswer == eachQuestion.correctAnswer){
+            correctCount++;
+            answerContainers[index].style.color = 'lightgreen';
+        }
+        else{
+            answerContainers[index].style.color = 'red';
+        }
+    });
+
+    result.innerHTML = `${correctCount} out of ${quizQuestions.length}`;
     
 }
 
@@ -101,5 +122,4 @@ submitButton.addEventListener('click' ,  DisplayResult);
 
 heading.style.marginBottom = " 5px ";
 heading.style.borderBottom = "2px solid green"
-result.style.backgroundColor = "purple";
 
