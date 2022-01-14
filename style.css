@@ -24,6 +24,7 @@ body{
     display : flex;
     flex-direction: column;
     font-size: 1.5em;
+    float: left;
 }
 button{
     font-size: 25px;

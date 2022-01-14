@@ -84,33 +84,33 @@ const result = document.getElementById('result');
         console.log(e.correctAnswer);
         */
     })
-};
+    };
 
-// Display result 
-function DisplayResult () {
-    const answerContainers = quizContainer.querySelectorAll('.answer');
-    console.log(answerContainers);
-    let correctCount = 0;
-    quizQuestions.forEach( ( eachQuestion , index) => {
-        // find the selected answer by the user
-        const answerContainer = answerContainers[index];
-        console.log(answerContainer);
+    // Display result 
+    function DisplayResult () {
+        const answerContainers = quizContainer.querySelectorAll('.answer');
+        console.log(answerContainers);
+        let correctCount = 0;
+        quizQuestions.forEach( ( eachQuestion , index) => {
+            // find the selected answer by the user
+            const answerContainer = answerContainers[index];
+            console.log(answerContainer);
 
-        const selector = `input[name = "Question${ index }" ]:checked`;
-        const selectedAnswer = (answerContainer.querySelector(selector) || {}).value;
-        console.log(selectedAnswer);
-        if( selectedAnswer == eachQuestion.correctAnswer){
-            correctCount++;
-            answerContainers[index].style.color = 'lightgreen';
-        }
-        else{
-            answerContainers[index].style.color = 'red';
-        }
-    });
+            const selector = `input[name = "Question${ index }" ]:checked`;
+            const selectedAnswer = (answerContainer.querySelector(selector) || {}).value;
+            console.log(selectedAnswer);
+            if( selectedAnswer == eachQuestion.correctAnswer){
+                correctCount++;
+                answerContainers[index].style.color = 'lightgreen';
+            }
+            else{
+                answerContainers[index].style.color = 'red';
+            }
+        });
 
-    result.innerHTML = `${correctCount} out of ${quizQuestions.length}`;
-    
-}
+        result.innerHTML = `${correctCount} out of ${quizQuestions.length}`;
+        
+    };
 
 // display Quiz right away
 quizDisplay();
