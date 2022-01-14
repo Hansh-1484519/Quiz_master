@@ -6,13 +6,30 @@
 body{
     margin : auto;
     width : 80%;
-    background-color: darkgrey;
+    background-color: #292d3e;
     text-align: center;
-    background: #292d3e;;
     color :aliceblue;
 }
-.quiz-container{
-    background-color: azure;
-    height: 400px;
+#quiz-container{
+    background-color: rgb(223, 156, 57);
+    display: flex;
+    flex-direction: column;
     
+}
+.question{
+    font-size: 2em;
+    float: left;
+}
+.answer{
+    display : flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+button{
+    font-size: 25px;
+    color :beige;
+    background-color: rgb(85, 85, 194);
+    height : 40px;
+    width : 200px;
+    border: none;
 }
