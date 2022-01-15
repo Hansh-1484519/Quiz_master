@@ -68,7 +68,7 @@ button{
 }
 #result{
     display: none;
-    border : 1px solid rgb(3, 78, 7);
+    border : 1px solid rgb(39, 39, 172);;
     margin : auto;
     font-size: 25px;
     width : 300px;
