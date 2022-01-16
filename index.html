@@ -7,35 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz_master</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
-  <h1 id ="heading">Quiz on important facts</h1>
-  <div id="quiz-container">
-    <!--
-      format
+  <div class="section">
 
-      Quiz Question. <br>
-      <label for="quiz">
-        <input type="radio" name="quiz" id="quiz"> a : Option 1
-      </label> <br>
-      <label for="quiz">
-        <input type="radio" name="quiz" id="quiz"> b : Option 2
-      </label> <br>
-      <label for="quiz">
-        <input type="radio" name="quiz" id="quiz"> c : Option 3
-      </label> <br>
-      <label for="quiz">
-        <input type="radio" name="quiz" id="quiz"> d : Option 4
-      </label> <br>
-    --> 
-    
+    <h1 id ="heading">Quiz on important facts</h1>
+    <div id="quiz-container">
+      <!--
+        format
+        
+        Quiz Question. <br>
+        <label for="quiz">
+          <input type="radio" name="quiz" id="quiz"> a : Option 1
+        </label> <br>
+        <label for="quiz">
+          <input type="radio" name="quiz" id="quiz"> b : Option 2
+        </label> <br>
+        <label for="quiz">
+          <input type="radio" name="quiz" id="quiz"> c : Option 3
+        </label> <br>
+        <label for="quiz">
+          <input type="radio" name="quiz" id="quiz"> d : Option 4
+        </label> <br>
+      --> 
+      
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <button id="submit">Submit Quiz</button>
+    <div id="result">  </div>
   </div>
-  <button id="prev">Previous</button>
-  <button id="next">Next</button>
-  <button id="submit">Submit Quiz</button>
-  <div id="result">  </div>
+    <img src="./mobile-application.gif" alt="loading">
+    <img src="./web-development.gif" alt="loading">
   <script src="script.js"></script>
+
 </body>
 
 </html>
