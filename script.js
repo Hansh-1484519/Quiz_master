@@ -111,6 +111,7 @@ function DisplayResult() {
 
     result.innerHTML = `${correctCount} out of ${quizQuestions.length}`;
     result.style.display = 'block';
+    result.style.verticalAlign = 'middle';
 };
 
 // display Quiz right away
