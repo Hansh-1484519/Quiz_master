@@ -45,7 +45,67 @@ const quizQuestions = [
             d: "32"
         },
         correctAnswer: "c"
-    }
+    },
+    {
+        question: "How many days are there in a month of october?",
+        answer: {
+            a: "29",
+            b: "30",
+            c: "31",
+            d: "32"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "How many days are there in the month of september?",
+        answer: {
+            a: "29",
+            b: "30",
+            c: "31",
+            d: "32"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "How many days are there in the month of april?",
+        answer: {
+            a: "29",
+            b: "30",
+            c: "31",
+            d: "32"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "How many days are there in the month of january?",
+        answer: {
+            a: "29",
+            b: "30",
+            c: "31",
+            d: "32"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "How many days are there in the month of june?",
+        answer: {
+            a: "29",
+            b: "30",
+            c: "31",
+            d: "32"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "How many days are there in the month of december?",
+        answer: {
+            a: "29",
+            b: "30",
+            c: "31",
+            d: "32"
+        },
+        correctAnswer: "c"
+    },
 ];
 
 // function to display quizes
